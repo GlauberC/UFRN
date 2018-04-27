@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('div.tabelaDiv').hide();
+      $(".resgatarBtn").click(function(){
+        $('div.tabelaDiv').show();
+        $.get("resgatar.php", function(data, status){
+          $('table tbody.tabelaBody').html(data);
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <main class="container">
+    <h2>Cadastrar usuário</h2>
+    <div class="row">
+      <form action="cadastrar.php" method="get">
+        <div class="form-group">
+          <label>email:</label>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <label>Nome:</label>
+          <input type="text" class="form-control" name="nome">
+        </div>
+        <div class="form-group">
+          <label>Senha:</label>
+          <input type="password" class="form-control" name="senha">
+        </div>
+        <button class="btn btn-success btn-block form-control" type="submit">Cadastrar</button>
+      </form>
+    </div>
+    <div class="row"><br>
+      <button class="resgatarBtn btn btn-info btn-block form-control">Resgatar Dados</button>
+    </div>
+    <div class="row table tabelaDiv">
+      <table class="table">
+        <thead>
+          <th>Email</th>
+          <th>Nome</th>
+        </thead>
+        <tbody class="tabelaBody">
+        
+        </tbody>
+      </table>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
