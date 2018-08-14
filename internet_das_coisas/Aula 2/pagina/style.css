@@ -1,0 +1,36 @@
+body{
+    background-color: azure;
+    color: #ffff66;
+
+}
+main{
+    background-color: lightblue;
+    width: 800px;
+    height: 1200px;
+    margin: 0 auto;
+    margin-top: -20px;
+    display: block;
+}
+header{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h1{
+    color: #fff
+}
+
+a{
+    float: right;
+    clear:both;
+}
+img {
+    opacity: 0.2;
+    box-sizing: border-box;
+    float: right;
+    clear: both;
+}
+img:hover{
+    opacity: 1;
+    transition: opacity 2s;
+}
