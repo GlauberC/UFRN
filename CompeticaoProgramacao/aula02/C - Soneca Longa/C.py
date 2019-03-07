@@ -78,7 +78,6 @@ def reduce(l):
 def getKey(el):
     return el[0]
 
-ent = ["13:00 15:00 Lectures, more lectures!", "15:30 17:15 Reading (I love reading, but should I schedule it?)", "10:00 12:00 Lectures, as everyday.", "12:00 13:00 Lunch, again!!!"]
 day = 0
 n_case = 'a'
 while(n_case != ''):
